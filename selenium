@@ -1,5 +1,14 @@
 from selenium import webdriver
 
-wd = webdriver.Chrome('C:/chromedriver_win32/chromedriver.exe')
+wd = webdriver.Chrome('F:/chromedriver_win32/chromedriver.exe') #경로 설정 변경
 
-wd.get('http://www.hanbit.co.kr')
+wd.get('https://logins.daum.net/accounts/signinform.do?url=https%3A%2F%2Fmail.daum.net%2F')
+
+wd.find_element_by_name('id').send_keys('wjdwn1314@naver.com') # 아이디
+wd.find_element_by_id('inputPwd').send_keys('비밀번호') # 패스워드
+wd.find_element_by_class_name('btn_comm').click()
+
+wd.implicitly_wait(30)
+
+xPath = '''//*[@id="mArticle"]/div/div[3]/a'''
+wd.find_element_by_xpath(xPath).click()
