@@ -1,0 +1,5 @@
+from selenium import webdriver
+
+wd = webdriver.Chrome('C:/chromedriver_win32/chromedriver.exe')
+
+wd.get('http://www.hanbit.co.kr')
